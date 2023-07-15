@@ -1,0 +1,173 @@
+﻿
+
+
+<p>
+    Name : @person.SalesPerson
+</p>
+
+<br />
+
+<p>
+    Amount :@person.Amount
+</p>
+
+<br />
+
+<p>
+    IsActive:@person.isActive
+</p>
+
+<p>
+    @selectedGroup
+
+</p>
+
+<p>
+    @selectedLocationId
+</p>
+
+ <p>
+      <ul>
+          @foreach(var loc in person.Locations){
+              <li>@loc.City,  @loc.ProvState</li>
+          }
+      </ul>
+ </p>
+
+<br />
+
+<h1>Numbers / text</h1>
+<input type="number"
+       @bind-value="person.Amount"
+       @bind-value:event="oninput" />
+<br />
+<br />
+<br />
+
+<h5>CheckBox</h5>
+<label for="checkbox">IsActive</label>
+<input type="checkbox" id="checkbox" name="checkbox"
+       @bind-value="@person.isActive"
+       @bind-value:event="oninput" />
+
+<br />
+<br />
+     
+  <h1>Radio</h1>
+<label>
+<input 
+    type="radio"
+    name="group" 
+    value="1"
+
+    checked = "@(selectedGroup == 1)"
+    @onclick = "@(()=>selectedGroup = 1)" 
+    />1
+</label>
+
+<label>
+<input 
+    type="radio"
+    name="group"
+    value="2"
+     
+    checked="@(selectedGroup == 2)"
+    @onclick="@(()=>selectedGroup = 2)" 
+    />
+    2
+
+</label>
+
+<br />
+<br />
+
+
+<h1>Selector</h1>
+<label>
+    <select
+    @bind="selectedLocationId"    
+    >
+        <option value="choose location"></option>
+      @foreach(var location in person.Locations)
+      {
+          <option value="@location.Id">@location.City</option>
+      }
+    </select>
+</label>
+
+
+<h1>table</h1>
+
+<table class="table">
+    @foreach(var loc in person.Locations){
+<tr>
+    <td>@loc.Id</td>
+        <td>
+            <input type="text" 
+                class="form-control"
+                @bind-value = "@loc.City"  
+                @bind-value:event = "oninput"
+                />
+        </td>
+    <td>
+                <input type="text"
+                   class="form-control"
+                   @bind-value="@loc.ProvState"
+                   @bind-value:event="oninput" />
+    </td>
+    <td>
+                <input type="text"
+                   class="form-control"
+                   @bind-value="@loc.Country"
+                   @bind-value:event="oninput" />
+    </td>
+</tr>
+    }
+
+</table>
+
+   
+
+@code {
+
+
+    int selectedGroup = 0;
+    int selectedLocationId = 0;
+   
+
+    IndexViewModel person = new IndexViewModel
+        {
+            SalesPerson = "Alex",
+            Amount = 1500,
+            Locations = new List<Location>
+                {
+                    new Location{
+                        Id = 1, City = "Toronto" , ProvState="Ontario" , Country="Canada"
+                    },
+
+                    new Location{
+                        Id = 2, City = "Montreal" , ProvState="Quebec" , Country="Canada"
+                    },
+      }
+        };
+
+
+
+
+    class IndexViewModel
+    {
+        public string SalesPerson { get; set; }
+        public double Amount { get; set; }
+        public bool isActive { get; set; }
+        public List<Location> Locations { get; set; }
+
+    }
+
+    class Location
+    {
+        public int Id { get; set; }
+        public string City { get; set; }
+        public string ProvState { get; set; }
+        public string Country { get; set; }
+    }
+}

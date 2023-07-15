@@ -1,0 +1,23 @@
+﻿@page "/maincascade"
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+<CascadingValue Name="Counter" Value="@currentCount">
+    
+    <ComponentA/>
+
+</CascadingValue>
+
+@code {
+    private int currentCount = 0;
+
+    private int count = 0;
+
+
+    private void IncrementCount()
+    {
+        currentCount++;
+        count = 2;
+    }
+}

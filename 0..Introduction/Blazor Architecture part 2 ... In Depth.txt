@@ -1,0 +1,94 @@
+Blazor ...... In depth 
+
+##################------CLIENT SIDE --------#############################################
+
+
+We need to be able to run the code on the browser 
+
+-Web ASEMBLY  ...
+	-Is a language that can run directly in the browser(because  chrome ,internet explorer etc are grade on this web asymbly standared)
+		-as long as your code is writen in web asembly language , there's browser support 
+		  and it's runs natively and it runs realy fast ... perfomance is amazing 
+
+	-Is  a compiler target 
+		source(language) ----> COMPILER(converts)------> target(language) 
+		eg C# ----to ---> Intermediate language(runs within .net runtime)
+
+	-C# runs is the browser as web asembly (this is not entirely true in terms of how blazor runs on the browser)
+	-Blazor does not turn the c# code into web asymbly
+
+Blazor does mono web asembly 
+
+MONO WEB ASEMBLY 
+-Is a runtime 
+-It itself is a web asembly 
+-It runs on the browser 
+
+
+BROWSER 
+	-DOM 
+	-layers
+		-mono-webasembly
+		-.Net stard 
+			-blazor framework
+ 				Blazor app (runs here) 
+
+-when the blazor server runs ... 
+-when the user sends an http request through the browser 
+-the server first pushes the mono web asembly to the browser 
+
+-Now the blazor app (all dependencies will be downloaded to the server ) 
+
+
+
+How does blazor uses html 
+-Blazor uses a component based archietecture 
+	-we create components in the blazor app and we call it the component tree
+	-this component is being tracked by the blazor app 
+		-In the app 
+			-prev tree 
+			-current tree
+		
+	-when ever the user makes some changes , it generates the current tree and then compares with the prev tree 
+	 and then create a component tree div and will be sent to the dom and used to update the dom 
+
+
+.NET standard = c# dll 
+blazor framework = c# dll 
+blazor app = c# dll 
+ 
+
+
+
+###################---------SERVER SIDE ------#############################33
+
+Works similarly as in part 1 
+-everything happens on the server side 
+
+
+
+BROWSER 
+	-DOM 
+	-BLAZOR SERVER .JS 
+
+	
+
+SERVER 
+	-.NET FRAMEWORK 
+		-BLAZOR FRAMEWORK 
+			-BLAZOR APP
+				-prev tree
+				-current tree
+
+
+Browser --------(signalR)--------- server 
+
+
+
+
+
+
+
+
+
+

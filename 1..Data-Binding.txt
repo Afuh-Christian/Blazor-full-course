@@ -1,0 +1,19 @@
+
+
+1..display info (one way data binding ) 
+
+2 ... manipulate information (two way data binding ) 
+
+
+we bind the ui element to the variables as one 
+
+####################----ONE WAY DATA BINDING ------#######################
+    
+  Variables ----bind to -----> UI elements
+
+
+####################----TWO WAY DATA BINDING ------#######################
+
+  Variables ----bind to -----> UI elements
+
+  UI elements ----bind to -----> Variables

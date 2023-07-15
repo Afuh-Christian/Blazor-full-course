@@ -1,0 +1,113 @@
+
+
+2 typical web archietectures exist
+
+1-REQUEST AND RESPONSE 
+
+ USER -> BROWSER ---send http request--> SERVER 
+SERVER(processes the request) ---->send http response(html format)---> BROSWER 
+
+the http response contains html and well be rendered on the browser screen 
+
+frameworks that uses this archietecturn 
+ - asp 
+ -jsp 
+ - web forms 
+ - mvc
+ 
+
+
+2 - Very interactive ... 
+ IN this archietecture : 
+  -It uses js running directly on the browser and renders the results  to the DOM 
+  -USER ----> BROWER (senses onclick events on the js )  -----http request-----> WEB API (rest api) -----> DATABASE   
+  -WEB API (rest api)  -------http response( json format ) ------>  BROSWER(data is consumed in the js and an html is created )  
+
+ 
+frameworks that use this archietecture 
+ - react  .. facebook 
+ -angular .. google 
+ -vue 
+
+
+ -blazor .. microsoft
+3 .. Blazor has 2 architectures 
+
+ I....CLIENT SIDE 
+   -similar to the 2nd type of archietecture 
+   -Insted we use c# 
+	-both on client and server side 
+   
+
+ II ... SERVER SIDE 
+      -blazor has a hosting model that is both client and server side 
+      -Instead we use blazor
+		-Pull the c# code from the client side 
+      
+		
+      -Blazor can call the 
+		-c#
+		-service layer 
+		-repository layer 
+		-entity framework to work with databases 
+		
+      -Web sockets(signalR) to link SERVER AND CLIENT side  ... instead of http request and response 
+      -blazor js is used to communicate with the blazor app  over c# code 
+
+
+      -comparing the CLIENT side archietecture and SERVER side archietecture is that 
+		-CLIENT side -- we can create microservices by 
+				-creating different web api's 
+				
+		-SERVER side ---also do same 
+				-we can call the :
+					-service layer 
+					-contact layer 
+					-etc 
+				 with thesame machine because this is monolynic
+
+				-But we want to archieve the monolytic archietecture on the server side , but it's not going to be efficient
+				-if we still want to support the microservices , we have to pull the :
+					-service layer 
+					-repository layer 
+				 outside to a different machine(different coding environment) 
+
+
+NB ... the request response archietecture is stateless  
+with the blazor archietecture ... 
+
+  SERVER  side 
+	..the pb is we are maintaining the state on the server 
+	  so if we have lot's of users , means we will host alot of state ( that will cost alot of resources ) 
+
+
+
+ 
+
+
+
+      -
+      -
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

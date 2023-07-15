@@ -1,0 +1,36 @@
+
+
+############------CLIENT SIDE (WEBASEMBLY) --------###############3
+
+-FULLY utilizer the client side resources and removes avoide burden on the server 
+-Initaill load is always slow because it downloads everything 
+
+
+Best for large projects 
+
+
+###########--------SERVER SIDE -------------###############3
+
+-pros 
+	-very fast inital load because everything is on the server ... 
+	-we can directly call 
+		-service layers 
+		-repository layers 
+	 without calling an api
+	-no worry for 
+		-sercurity 
+		-json convertion 
+
+
+-cons 
+	-eg a variable that stores thousands of rows of data , that data has to be rendered to the render tree
+	 and we have two render trees (current and prev)  , and because you're in the variable , you already have thousand of rows ,
+	 and those rows will have to be reflected within those two render trees , so we will end up keeping large amount of data on the server side 
+	 
+	-burden on the signalR
+
+
+Good for creating small apps .... not using large amount of data 
+
+-use pagging 
+-save data often 

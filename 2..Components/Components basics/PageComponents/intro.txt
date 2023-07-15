@@ -1,0 +1,24 @@
+
+
+
+right click on director (folder) 
+	add 
+		Razor component  
+
+NB ---- the first leter should be capitalized 
+
+
+
+
+-one page component  can have multiple routes 
+	-different routes that leads to thesame page 
+	-Page -> Routes .... one to many relation (one route cannot be used for more than one page ) 
+
+
+
+
+
+
+
+
+

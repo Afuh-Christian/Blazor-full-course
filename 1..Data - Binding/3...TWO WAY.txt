@@ -1,0 +1,99 @@
+
+
+
+we need to use the "BIND ATTRIBUTE" 
+-the variable changes in real time 
+
+
+
+<p> 
+
+	@a
+</p>
+
+
+<input type="text" @Bind-value = "a" />
+
+
+
+
+
+@code{
+ 
+ string a = "New text"
+
+}
+
+
+##############-----we can change how the variable gets updated ....@Bind-value:event = "" 
+
+
+
+
+
+<p> 
+
+	@a
+</p>
+
+
+<input type="text" @Bind-value = "a" 
+		   @Bind-value:event = "oninput"
+/>
+
+
+
+
+
+@code{
+ 
+ string a = "New text"
+
+}
+
+
+############
+
+if you use 
+
+1 -Bind = "a" 
+  -Bind:event = "oninput"
+
+2 -@Bind-value = "a" 
+  -Bind:event = "oninput"
+
+#############
+
+-also works well for checkboxes 
+
+
+
+----------------------
+a changes in real time 
+----------------------
+
+
+
+
+##############################################3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

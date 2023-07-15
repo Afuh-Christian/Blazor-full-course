@@ -1,0 +1,42 @@
+
+
+   Afuh Christian Forkoum 
+
+
+-I am from Cameroon , specifically in Bamenda at the moment 
+-I am a self taught software developer 
+-During  my Journey , I have learnt Programing Languages like 
+	-Javascript
+	-Java 
+	-Python
+	-C 
+	-C# 
+	-C++
+	-Kotlin 
+
+-Learning all these Languages made me realize they all use thesame 
+ concepts 
+
+-I went further to now learn Django , an I understood how all the data
+ was being handled 
+
+-But I realized that Html,css , and Js weren't enough for the front
+ end because routing appeared to be slow 
+
+-I now learnt React and realized it had alot of capabilities 
+
+-I know I don't know much about this field because I haven't spent that much time 
+ one it . But the one thing I can assure you is that , I am a very fast learner 
+ and also I alway try to get better and better daily 
+
+-I've been on this coding journey for two years now with many different programming 
+ languages 
+
+-But now I now want to focus on one which is Javascript  and use 
+ frameworks just for it so I may one day be an expert 
+
+-Github link ... this is a React project I did    "https://github.com/Afuh-Christian/chrisdev"
+
+
+			         Thanks for Reading .. 
+ 

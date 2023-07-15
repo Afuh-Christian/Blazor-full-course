@@ -1,0 +1,107 @@
+This can cause some performance issues .... we will see how to resolve these issues 
+
+
+
+
+
+#####################-----------MainComponent----------------###################################
+
+@page "/maincascade"
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+----------------------------------------------------------------------------
+<CascadingValue Name="Counter" Value="@currentCount">
+    
+    <CascadingValue Name="TitleColor" Value= "@("blue")"> 
+        <!--Passing a value directly  Value = "@("blue")"-->
+
+   <Component1/>
+
+   </CascadingValue>
+
+</CascadingValue>
+----------------------------------------------------------------------------
+
+
+@code {
+    private int currentCount = 0;
+
+    private int count = 0;
+
+
+    private void IncrementCount()
+    {
+        currentCount++;
+        count = 2;
+    }
+}
+
+
+
+#####################------------Component2---------------###################################
+
+
+
+
+<div class="ml-7">
+    <h3 style="color:@Color">Component2</h3>
+</div>
+
+
+<p>
+    Count : @currentCount
+</p>
+
+
+@code {
+
+
+    [CascadingParameter(Name = "Counter")]
+    public int currentCount { get; set; }
+
+----------------------------------------------------------------------------
+    [CascadingParameter(Name = "TitleColor")]
+    public string Color { get; set; }
+----------------------------------------------------------------------------
+
+
+}
+
+
+
+
+
+
+################################----------About the Performance Issue--------------##############################
+
+set the isFixed = "true"
+
+------------------------------------------------------------------------------------
+  <CascadingValue Name="TitleColor" Value= "@("blue")" IsFixed="true"> 
+------------------------------------------------------------------------------------
+        <!--Passing a value directly  Value = "@("blue")"-->
+
+   <Component1/>
+
+   </CascadingValue>
+
+##################---For cascading fixed parameter------- ##############3
+
+
+
+
+
+-with cascading parameter .... You can only pass values down
+
+
+
+
+-Avoid using cascading parameter when working with large amounts of data ... and rather use State management
+
+
+
+
+
+
+

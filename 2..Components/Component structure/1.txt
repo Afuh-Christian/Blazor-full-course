@@ -1,0 +1,5 @@
+
+A component has 2  areas 
+
+	-1. html markup 
+	-2. c# ... you can have more than one of these 

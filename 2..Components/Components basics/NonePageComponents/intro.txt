@@ -1,0 +1,4 @@
+the purpose of having a non page component is to 
+
+	-to encapsulate  some functionality , wethere the component is reusable or not 
+	

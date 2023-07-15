@@ -1,0 +1,28 @@
+
+
+@page "/order"
+
+<h3>OrderEntryComponent</h3>
+
+<TitleComponent Department="@a" />
+
+@code {
+    string a = "Afuh Christian";
+
+}
+
+
+########################################################
+
+
+<h3>Welcome to the  @Department   Department </h3>
+
+@code {
+
+    [Parameter] 
+    public string Department { get; set; }
+
+}
+
+
+

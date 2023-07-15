@@ -1,0 +1,90 @@
+index.razor 
+
+
+<p> 
+	@a
+</p>
+
+
+
+@code{
+
+  string a = "this is one way data binding"
+
+}
+
+
+########################
+
+example 
+
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<p>
+ Name : @person.SalesPerson
+</p>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code{
+    //  #regon "View Model" 
+
+   /* protected override void OnInitialized()
+     {
+         base.OnInitialized();
+     }*/
+
+
+    IndexViewModel person = new IndexViewModel
+        {
+            SalesPerson = "Alex",
+            Amount = 1500,
+            Locations = new List<Location>
+                {
+                    new Location{
+                        Id = 1, City = "Toronto" , ProvState="Ontario" , Country="Canada"
+                    },
+
+                    new Location{
+                        Id = 2, City = "Montreal" , ProvState="Quebec" , Country="Canada"
+                    },
+
+
+
+
+
+                }
+        };
+
+
+
+
+
+    class IndexViewModel 
+    {
+        public string SalesPerson {get; set;}
+        public double Amount {get; set;}
+        public bool isActive {get; set;}
+        public List<Location> Locations { get; set; }
+
+    }
+
+    class Location 
+    {
+        public int Id { get; set; }
+        public string City { get; set; } 
+        public string ProvState { get; set; }
+        public string Country { get; set; }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+ 
+
+
+##################...DateTimeBaseComponent.cs...#######33
+
+
+using Microsoft.AspNetCore.Components;
+
+namespace BlazorAppClient.Pages.CourseCode.Components.InheritComponent
+{
+    public class DateTimeBaseComponent : ComponentBase
+    {
+        public DateTime dateTime { get; set; }
+    }
+}
+
+
+######################....
+
+
+@page  "/salescomponent"
+
+-----------------------------------------
+@inherits DateTimeBaseComponent
+-----------------------------------------
+<h3>SalesComponent</h3>
+
+<p> Today is : <DateComponent/></p>
+
+-----------------------------------------
+<p>Date : @dateTime</p>
+-----------------------------------------
+
+@code {
+
+
+       
+}
+
+
+
+
+
+

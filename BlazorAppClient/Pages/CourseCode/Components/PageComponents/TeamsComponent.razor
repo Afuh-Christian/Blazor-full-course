@@ -1,0 +1,68 @@
+﻿@page "/teams"
+
+
+
+<h3>TeamsComponent</h3>
+
+
+
+
+<table class="table">
+    <tr>
+        <th>Team</th>
+        <th>Region</th>
+    </tr>
+    @foreach (var team in teams)
+    {
+        <tr>
+             <!-- Pass data through routes-->
+            <td><a class="nav-link" href="@($"/team/{team.Id}")">@team.Name</a></td>
+
+            <td>@team.Region</td>
+        </tr>
+    }or
+</table>
+
+
+
+
+@code {
+    private List<Team> teams = new List<Team>()
+    {
+         new Team {Id = 1, Name = "Red" , Region="Region One"} ,
+         new Team {Id = 2, Name = "Blue" , Region="Region Two"} ,
+         new Team {Id = 3, Name = "Yellow" , Region="Region Three"},
+    };
+
+    /*
+    var allMembers = new List<Member>()
+        {
+        new Team {Id = 1, Name = "John" , Age= 20 ,TeamId = 1},
+         new Team {Id = 2, Name = "Mike" , Age= 25 ,TeamId = 1},
+          new Team {Id = 3, Name = "Joe" , Age= 26 ,TeamId = 2},
+           new Team {Id = 4, Name = "Ross" , Age= 21 ,TeamId = 2},
+            new Team {Id = 5, Name = "Ryan" , Age= 23 ,TeamId = 3},
+             new Team {Id = 6, Name = "Fox" , Age= 22 ,TeamId = 3}
+
+    }
+    */
+
+
+
+    public class Team
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = "";
+        public string Region { get; set; } = "";
+    }
+
+    /*
+    public class Member
+        {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public int TeamId { get; set; }
+    }
+    */
+}

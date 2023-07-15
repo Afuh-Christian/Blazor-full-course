@@ -1,0 +1,41 @@
+
+
+program.cs   
+   |
+   |
+   v 
+startapp ( dependency injection , middleware config)
+   |
+   |
+   v
+_host(server side)/index.html(client side) 
+   |
+   |
+   v
+App(root) .. to set up routing
+   |
+   |
+   v
+MainLayout
+ -@Body .... placeholder for all the components in the route
+   |
+   |
+   v
+   
+   |
+   |
+   v
+
+   |
+   |
+   v
+
+   |
+   |
+   v
+
+
+-import .razor  has all the name spaces 
+	-@using 
+
+-we can just put import .razor in each component 

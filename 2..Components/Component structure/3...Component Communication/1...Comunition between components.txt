@@ -1,0 +1,22 @@
+
+#############....ROUTING PARAMERER....
+
+-communicaition between sibling components 
+
+
+#############....PARAMETER 
+
+-communicaiton between parent and child 
+
+
+###########...CASCADING PARAMETER ... Better used than PARAMETER
+
+
+
+#########...EVENT CALLBACK 
+
+ child -> parent ...to make the parent to cause and event 
+
+#########...REF 
+
+ parent -> child ....to make the child to cause and event 
